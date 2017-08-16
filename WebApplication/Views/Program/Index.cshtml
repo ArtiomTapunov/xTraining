@@ -1,0 +1,344 @@
+﻿@model IEnumerable<WebApplication.Models.Exercises>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tranning program</h2>
+<hr />
+
+<div class="row">
+    <div class="col-md">
+        <div class="text-center">
+            <h2>@ViewBag.Message</h2>
+        </div>
+        <div>
+            <table>
+            <tr>
+                <th>
+                <h3>Chest</h3>
+                </th>
+                <th>
+                <h3>|</h3>
+                </th>
+                <th>
+                <h3>@Html.ActionLink("Add New", "Add", new { muscleGroup = "Chest", programTitle = ViewBag.Message })</h3>
+                </th>
+            </tr>
+            </table>
+        </div>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RepeatCount)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SetCount)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.MuscleGroup)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    if (item.MuscleGroup == "Chest")
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Title)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.RepeatCount)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SetCount)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MuscleGroup)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                            </td>
+                        </tr>
+                    }
+                }
+
+            </table>
+        </div>
+</div>
+
+<br>
+
+<div class="row">
+    <div class="col-md">
+        <table>
+            <tr>
+                <th>
+                    <h3>Back</h3>
+                </th>
+                <th>
+                    <h3>|</h3>
+                </th>
+                <th>
+                    <h3>@Html.ActionLink("Add New", "Add", new { muscleGroup = "Back", programTitle = ViewBag.Message })</h3>
+                </th>
+            </tr>
+        </table>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RepeatCount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SetCount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MuscleGroup)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                if (item.MuscleGroup == "Back")
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RepeatCount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SetCount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MuscleGroup)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                        </td>
+                    </tr>
+                }
+            }
+
+        </table>
+    </div>
+</div>
+
+<br>
+
+<div class="row">
+    <div class="col-md">
+        <table>
+            <tr>
+                <th>
+                    <h3>Legs</h3>
+                </th>
+                <th>
+                    <h3>|</h3>
+                </th>
+                <th>
+                    <h3>@Html.ActionLink("Add New", "Add", new { muscleGroup = "Legs", programTitle = ViewBag.Message })</h3>
+                </th>
+            </tr>
+        </table>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RepeatCount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SetCount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MuscleGroup)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                if (item.MuscleGroup == "Legs")
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RepeatCount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SetCount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MuscleGroup)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                        </td>
+                    </tr>
+                }
+            }
+
+        </table>
+    </div>
+</div>
+
+<br>
+
+<div class="row">
+    <div class="col-md">
+        <table>
+            <tr>
+                <th>
+                    <h3>Arms</h3>
+                </th>
+                <th>
+                    <h3>|</h3>
+                </th>
+                <th>
+                    <h3>@Html.ActionLink("Add New", "Add", new { muscleGroup = "Arms", programTitle = ViewBag.Message })</h3>
+                </th>
+            </tr>
+        </table>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RepeatCount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SetCount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MuscleGroup)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                if (item.MuscleGroup == "Arms")
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RepeatCount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SetCount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MuscleGroup)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                        </td>
+                    </tr>
+                }
+            }
+
+        </table>
+    </div>
+</div>
+
+<br>
+
+<div class="row">
+    <div class="col-md">
+        <table>
+            <tr>
+                <th>
+                    <h3>Shoulders</h3>
+                </th>
+                <th>
+                    <h3>|</h3>
+                </th>
+                <th>
+                    <h3>@Html.ActionLink("Add New", "Add", new { muscleGroup = "Shoulders", programTitle = ViewBag.Message })</h3>
+                </th>
+            </tr>
+        </table>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RepeatCount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SetCount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MuscleGroup)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                if (item.MuscleGroup == "Shoulders")
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RepeatCount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SetCount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MuscleGroup)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                        </td>
+                    </tr>
+                }
+            }
+
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</div>

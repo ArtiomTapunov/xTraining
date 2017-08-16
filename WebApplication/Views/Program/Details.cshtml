@@ -1,0 +1,68 @@
+﻿@model WebApplication.Models.Exercises
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<br>
+<h2>Exercise details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal  col-md-10 col-md-offset-4">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepeatCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepeatCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SetCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SetCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MuscleGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MuscleGroup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProgramTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProgramTitle)
+        </dd>
+
+    </dl>
+</div>
+<div class="text-center">
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>

@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "LoggedIn";
+}
+
+@if (Session["UserID"] != null)
+{
+    <br>
+    <div class="form-group">
+        <div class="text-center">
+            <h2>Hello, @Session["Username"].ToString(). @Html.ActionLink("Click", "Index", "Program") to view your tranning program.</h2>
+        </div>
+    </div>
+}
+else
+{
+    <br>
+    <div class="form-group">
+        <div class="text-center">
+            <h2>Please Sign In for using this feature.</h2>
+        </div>
+    </div>
+}
+

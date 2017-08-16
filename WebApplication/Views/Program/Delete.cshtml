@@ -1,0 +1,66 @@
+﻿@model WebApplication.Models.Exercises
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<br>
+<h2>Removing exercise</h2>
+<hr />
+<div class="text-center">
+    <h3>Are you sure you want to remove this exercise?</h3>
+</div>
+    <div>
+        <dl class="dl-horizontal col-md-10 col-md-offset-4">
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.RepeatCount)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.RepeatCount)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SetCount)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SetCount)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MuscleGroup)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MuscleGroup)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ProgramTitle)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ProgramTitle)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color text-center">
+                <input type="submit" value="Remove" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
